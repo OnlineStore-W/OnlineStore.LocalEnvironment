@@ -1,0 +1,6 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY ../services/gateway-service .
+EXPOSE 80
+EXPOSE 443
+CMD ["dotnet", "OnlineStore.Gateway.Api.dll"]
